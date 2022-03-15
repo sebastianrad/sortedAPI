@@ -1,19 +1,19 @@
+import { boohooGroupToken } from "../support/apiKeys";
 import {  createShipmentsUrl } from "../support/routes";
 
 export const Shipment = {
     method: 'POST',
-    url: 'https://api-int.sorted.com/pro/shipments',
-   // url: createShipmentsUrl,
+    url: createShipmentsUrl,
     failOnStatusCode: false,
-    Auth: {
-        key: "x-api-key", value: 'YjM5MDMxMjdlMmY3NDYwMWFiNWU3YTZhZjhiNTU0OWM='
-    },
+    // Auth: {
+    //   //  key: "x-api-key", value: 'YjM5MDMxMjdlMmY3NDYwMWFiNWU3YTZhZjhiNTU0OWM='
+    // },
     headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
         'Accept-Encoding': 'gzip',
         'x-api-version': '1.1',
-        'x-api-key': 'YjM5MDMxMjdlMmY3NDYwMWFiNWU3YTZhZjhiNTU0OWM='
+        'x-api-key': boohooGroupToken
     },
     body: {
         "shipment_type": "on_demand",
